@@ -1,0 +1,6 @@
+# Run both containers simultaneously, back on 8080 and front on 8081
+# Start the back container
+docker run -d -p 8080:5000 -e CURRENT_ENVIRONMENT=production --name my-back-container meghihasini/back-image
+
+# Start the front container pointing to the back container
+docker run -d -p 8081:80 -e WS_BACK_URL=http://localhost:8080 --name my-front-container meghihasini/front-image

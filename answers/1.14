@@ -1,0 +1,11 @@
+# Stop all running containers
+docker stop my-back-container my-front-container
+
+# Remove all stopped containers
+docker rm my-back-container my-front-container
+
+# Remove all local images created during the TP
+docker rmi back-image meghihasini/back-image meghihasini/front-image
+
+# Or to remove all unused images at once:
+# docker system prune -a

@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  back:
+    image: meghihasini/back-image
+    ports:
+      - "8080:5000"
+    environment:
+      - CURRENT_ENVIRONMENT=production
+    # volumes:
+    #   - ./back/logs:/app/logs
+
+  front:
+    image: meghihasini/front-image
+    ports:
+      - "8081:80"
+    environment:
+      - WS_BACK_URL=http://localhost:8080
+    depends_on:
+      - back

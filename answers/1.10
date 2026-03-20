@@ -1,0 +1,5 @@
+# Open an interactive session inside the back container
+docker exec -it my-back-container /bin/bash
+
+# Once inside, run:
+cat /etc/*release
