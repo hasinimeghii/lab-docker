@@ -5,7 +5,7 @@ docker stop my-back-container my-front-container
 docker rm my-back-container my-front-container
 
 # Remove all local images created during the TP
-docker rmi back-image meghihasini/back-image meghihasini/front-image
+docker rmi back-image hasinimeghii/back-image hasinimeghii/front-image
 
 # Or to remove all unused images at once:
 # docker system prune -a
